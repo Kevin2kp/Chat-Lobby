@@ -1,0 +1,113 @@
+body, html {
+
+  width: 100%;
+  height: 100%;
+  padding: 1vw 1vh;
+}
+
+.player {
+
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  background: red;
+}
+
+.color_1{
+  color: red;
+}
+
+.color_2 {
+  color: dodgerblue;
+}
+
+.color_3 {
+  color:green;
+}
+
+.color_4 {
+  color: saddlebrown;
+}
+
+#lobby {
+
+  .row {
+    padding: 0 1em;
+  }
+
+  .container{
+    padding-top: 1em;
+  }
+
+  h1 {
+    padding: 1em 0;
+  }
+
+
+  h4{
+    line-height: 1.5em;
+  }
+
+  .color_picker {
+
+    input {
+      display: none;
+    }
+
+    label {
+      border: solid 1px black;
+    }
+
+    input:checked +label {
+      border: solid 5px;
+    }
+
+    label {
+      display: inline-block;
+      width: 2em;
+      height: 2em;
+    }
+
+
+    #color_choice_1 + label{
+      background: red;
+    }
+
+    #color_choice_2 + label{
+      background: dodgerblue;
+    }
+
+    #color_choice_3 + label{
+      background:green;
+    }
+
+    #color_choice_4 + label{
+      background: saddlebrown;
+    }
+  }
+}
+
+#log {
+
+  overflow-y: scroll;
+}
+
+#log.form-control {
+
+  resize: none;
+  height: 9.5em;
+
+  p {
+
+    font-size: 1em;
+  }
+}
+
+#input_chat {
+
+  height: 2.5em;
+  resize: none;
+}
+
+
+

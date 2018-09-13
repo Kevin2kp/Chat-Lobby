@@ -1,0 +1,19 @@
+{
+  "name": "a2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colour": "^0.7.1",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.4",
+    "socketio": "^1.0.0",
+    "socket.io": "latest"
+  }
+}

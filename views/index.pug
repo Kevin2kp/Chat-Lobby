@@ -1,0 +1,75 @@
+doctype html
+html(lang="en")
+	head
+		link(rel="stylesheet/less", type="text/css", href="/css/styles.less")
+		script.
+			less = {
+				env: "development",
+				async: false,
+				fileAsync: false,
+				poll: 1000,
+				functions: {},
+				dumpLineNumbers: "comments",
+				relativeUrls: false,
+				rootpath: ":/a.com/"
+			};
+		script(src="javascript/less.js")
+		meta(charset="UTF-8")
+		title
+		link(rel="stylesheet", href="/css/bootstrap.css")
+		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+	body
+		#lobby
+			h1 #{locals.title}
+			.row
+				.container.col-lg-3.col-md-6.col-sm-6
+						h4 Lobby
+						ul#panel_lobby.list-group
+							li.list-group-item Empty
+							li.list-group-item Empty
+							li.list-group-item Empty
+							li.list-group-item Empty
+				.container.col-lg-3.col-md-6.col-sm-6
+					h4 Join
+					.form-group
+						label(for="input_name") Nickname
+						input#input_name.form-control(type="text", placeholder="Example input")
+					.color_picker
+						| Color
+						br
+						#input_color.form-group
+							input#color_choice_1(type="radio", name="color" value="1")
+							label(for="color_choice_1")
+							input#color_choice_2(type="radio", name="color" value="2")
+							label(for="color_choice_2")
+							input#color_choice_3(type="radio", name="color" value="3")
+							label(for="color_choice_3")
+							input#color_choice_4(type="radio", name="color" value="4")
+							label(for="color_choice_4")
+					.btn-group.btn-group-justified
+						button#btn_join.btn(type="button")
+							| Join
+						button#btn_leave.btn.disabled(type="button")
+							| Leave
+
+
+				.container.col-lg-6.col-md-12.col-sm-12
+					.row
+						h4 Chat
+						div#log.form-control.form-group
+
+					.row
+						button#btn_send_message.btn.col-2 Send
+						textarea#input_chat.col-10.form-control
+
+
+
+
+
+
+	script(src="javascript/jquery.js")
+	script(src="javascript/socket.io.js")
+	script(src="javascript/lobby.js")
+	script(src="javascript/chat.js")
+
+
